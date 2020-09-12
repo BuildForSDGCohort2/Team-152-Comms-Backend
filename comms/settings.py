@@ -41,6 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # custom apps
+    'emails',
+
+    # third party apps
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -79,8 +85,11 @@ WSGI_APPLICATION = 'comms.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': os.getenv('MG_DB_NAME'),
+        'CLIENT': {
+            'host': os.getenv('MG_DB_HOST')
+        }
     }
 }
 
