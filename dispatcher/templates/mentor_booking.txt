@@ -1,0 +1,18 @@
+{% load custom_scripts %}
+
+Hello, {{ data.mentor_name }}.
+
+A learner, {{ data.learner_name }}, has just reached out to connect with you.
+They are interested in the following courses: {{ data.courses|expand }}.
+
+Please reach out to them as soon as poosible.
+
+Name: {{ data.learner_name }}
+Email: {{ data.learner_email }}
+Phone: {{ data.learner_phone }}
+{% if data.message %}
+
+{{ data.message }}
+
+{% endif %}
+SkillCafe is built by Team-152 for the BuildforSDG Program.

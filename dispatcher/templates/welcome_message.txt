@@ -1,0 +1,12 @@
+Hello, {{ data.name }}
+
+Welcome to SkillCafe!
+
+SkillCafe is a platform built to connect eager learners to mentors versed in specific digital skills.
+With this connection, individuals can power their journey and earn more.
+{% if data.message %}
+
+{{ data.message }}
+
+{% endif %}
+SkillCafe is built by Team-152 for the BuildforSDG Program.

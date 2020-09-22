@@ -1,0 +1,12 @@
+Congratulations, {{ data.learner_name }}!
+
+You have taken the first step in advancing your digital skills by connecting to a mentor, {{ data.mentor_name }}.
+Your payment has been processed and your mentor will get in touch with you soonest.
+
+You can also reach your mentor via email at {{ data.mentor_email }}.
+{% if data.message %}
+
+{{ data.message }}
+
+{% endif %}
+SkillCafe is built by Team-152 for the BuildforSDG Program.
