@@ -18,9 +18,10 @@ from django.urls import path, include
 
 from .views import root_view
 
+app_name='comms'
 urlpatterns = [
-    path('', root_view),
-    path('v1/', include('dispatcher.urls')),
+    path('', root_view, name='index'),
+    path('v1/', include('dispatcher.urls', namespace='dispatcher')),
     # path('admin/', admin.site.urls),
 ]
 
