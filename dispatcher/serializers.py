@@ -1,8 +1,8 @@
 
-from re import S
+from django.contrib.auth.models import User
+
 from rest_framework import serializers
-from rest_framework.fields import MISSING_ERROR_MESSAGE
-from rest_framework.serializers import Serializer
+from rest_framework.serializers import Serializer, ModelSerializer
 
 
 class APIRequestSerializer(Serializer):
@@ -34,3 +34,12 @@ class BookingSerializer(Serializer):
         max_length=200,
         allow_blank=True
     )
+
+class AuthRegisterSerializer(ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['email', 'password']
+    # email = serializers.EmailField()
+    # password = serializers.CharField(
+    #     max_length=200
+    # )

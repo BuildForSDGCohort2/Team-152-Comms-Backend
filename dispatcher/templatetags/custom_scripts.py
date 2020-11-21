@@ -5,8 +5,7 @@ register = template.Library()
 
 @register.filter
 def expand(value):
-    """
-    Expand a given list of courses.
+    """Expand a given list of courses.
 
     input: ['Graphic Design', 'Backend Development']
     result: Graphic Design, Backend Development

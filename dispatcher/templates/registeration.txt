@@ -1,0 +1,3 @@
+Follow the link to complete registeration.
+
+http://stemzone-staging.herokuapp.com/auth/verify-token/?token={{temp_token}}
